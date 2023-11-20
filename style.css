@@ -1,0 +1,261 @@
+@font-face {
+  font-display: swap;
+  font-family: "oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("C:\School\WebCoding\Sito\Fonts\Oswaldoswald-v53-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "open sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("C:\School\WebCoding\Sito\Fonts\Open Sansopen-sans-v36-latin-regular.woff2")
+    format("woff2");
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 19px;
+  background-color: #d1d1d1;
+  color: #2d2d2d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "oswald";
+}
+h3 {
+  font-size: 30px;
+}
+nav a {
+  font-family: "oswald";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.wide {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+header {
+  padding: 30px 20px;
+}
+nav li {
+  display: inline-block; /*display inline ma con gestione del margin verticale*/
+  margin-left: 20px;
+  list-style: none; /*toglie pallino da ul/li*/
+  text-transform: capitalize; /*trasforma il testo in testo con inziale maiuscola*/
+}
+nav a {
+  text-decoration: none; /*azzero stili di default dei tag link*/
+  color: white;
+  font-size: 30px;
+}
+
+nav a:hover {
+  color: cyan;
+}
+nav .active {
+  color: cyan;
+}
+
+#banner {
+  width: 100%;
+  background: url(img/mohole.webp) no-repeat center center;
+  background-size: cover;
+  height: 300px;
+}
+
+main h3 {
+  margin: 10px 0px;
+}
+
+.colonna {
+  padding: 20px;
+}
+
+.center {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.footer_pad {
+  padding: 20px;
+}
+
+main p {
+  text-align: left;
+  margin-top: 10px;
+  font-family: "open sans";
+}
+
+main i {
+  font-size: 60px;
+}
+
+footer {
+  padding: 30px 20px 60px;
+}
+
+footer.colonna {
+  padding: 10px 0px;
+}
+
+div.colonna a {
+  text-decoration: none;
+  color: white;
+}
+
+.cib-facebook {
+  color: #3b5998;
+}
+.cib-twitter {
+  color: #1da1f2;
+}
+.cib-youtube {
+  color: #ff0000;
+}
+.cib-instagram {
+  color: #f56040;
+}
+
+.menu_social {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  font-size: 50px;
+}
+
+.flexbanner{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+  bottom: 180px;
+  font-family: "open sans";
+  text-shadow: black;
+  
+  
+}
+
+/*CSS for page staff.html*/
+
+.flexgrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pos1{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+
+
+.pos2{
+    position: absolute;
+    height: 100px;
+    bottom:-50px;
+    left:0px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    color: rgba(255,255,255,0.6);
+    width: 100%;
+    z-index: 2;
+    transition: all 0.4s linear;
+    
+}
+
+
+
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pos1 img{
+  transition: all 0.8s ease;
+}
+
+.pos1 img:hover{
+  transform: scale(1.1);
+}
+
+.pos2:hover{
+  color: white;
+  bottom: 0px;
+}
+
+
+
+@media (min-width: 800px) {
+  header,
+  footer,
+  .grid_1,
+  .grid_3 {
+    display: grid;
+  }
+
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    justify-self: end;
+  }
+
+  /*settings for about.html, page in one column*/
+  .grid_1 {
+    justify-content: center;
+  }
+
+  .grid_1 article {
+    width: 60vw;
+  }
+
+  .grid_1 img {
+    width: 30vw;
+  }
+
+  .grid_3 {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  footer h4 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .flexgrid img{
+    width: 300px;
+  }
+
+  
+} /*media ending******************/
